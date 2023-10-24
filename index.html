@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="images/appelsoce.png">
+    <link id="tabIcon" rel="icon" type="image/x-icon" href="images/appelsoce.png">
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
@@ -11,6 +11,7 @@
 
         if (imageName) {
             document.getElementById('imageElement').src = `images/` + imageName + `.png`;
+            document.getElementById('tabIcon').href = `images/` + imageName + `.png`;
         }
     </script>
 </body>
