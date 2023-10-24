@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link id="tabIcon" rel="icon" type="image/x-icon" href="images/appelsoce.png">
+    <link id="TabIcon" rel="icon" type="image/x-icon" href="images/appelsoce.png">
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
-    <img id="imageElement" alt="Image Not Found">
+    <img id="ImageElement" alt="Image Not Found">
+    <iframe id="Embed" width="560" height="315" src="images/appelsoce.png" frameborder="0" allowfullscreen></iframe>
     <script>
         const imageName = new URLSearchParams(window.location.search).get('image');
 
         if (imageName) {
-            document.getElementById('imageElement').src = `images/` + imageName + `.png`;
-            document.getElementById('tabIcon').href = `images/` + imageName + `.png`;
+            document.getElementById('ImageElement').src = `images/` + imageName + `.png`;
+            document.getElementById('TabIcon').href = `images/` + imageName + `.png`;
+            document.getElementById('Embed').src = `images/` + imageName + `.png`;
         }
     </script>
 </body>
