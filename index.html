@@ -9,7 +9,7 @@
         const imageName = new URLSearchParams(window.location.search).get('image');
 
         if (imageName) {
-            document.getElementById('Embed').content = imageName + `.png`;
+            document.getElementById('Embed').src = imageName + `.png`;
         }
     </script>
 </body>
