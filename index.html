@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+    <link rel="icon" type="image/x-icon" href="images/appelsoce.png">
     <link rel="stylesheet" href="css.css">
+</head>
+<body>
     <img id="imageElement" alt="Image Not Found">
     <script>
         const imageName = new URLSearchParams(window.location.search).get('image');
 
         if (imageName) {
-            const imageElement = document.getElementById('imageElement');
-            imageElement.src = `images/` + imageName + `.png`;
+            document.getElementById('imageElement').src = `images/` + imageName + `.png`;
         }
     </script>
 </body>
