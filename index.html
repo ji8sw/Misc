@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <link rel="stylesheet" href="css.css">
+    <img id="imageElement" alt="Image Not Found">
+    <script>
+        const imageName = new URLSearchParams(window.location.search).get('image');
+
+        if (imageName) {
+            const imageElement = document.getElementById('imageElement');
+            imageElement.src = `images/` + imageName + `.png`;
+        }
+    </script>
+</body>
+</html>
