@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link id="TabIcon" rel="icon" type="image/x-icon" href="images/appelsoce.png">
     <link rel="stylesheet" href="css.css">
 </head>
 <body>
     <img id="ImageElement" alt="Image Not Found">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ji9sw.xyz/">
+    <meta id="EmbedOGTitle" property="og:title" content="Jimage">
+    <meta property="og:description" content="">
+    <meta id="EmbedOGImage" property="og:image" content="images/appelsoce.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ji9sw.xyz/">
+    <meta id="EmbedXTitle" property="twitter:title" content="Jimage">
+    <meta property="twitter:description" content="">
+    <meta id="EmbedXImage" property="twitter:image" content="images/appelsoce.png">
     <script>
         const imageName = new URLSearchParams(window.location.search).get('image');
 
         if (imageName) {
-            const imageUrl = `images/${imageName}.png`;
-            document.getElementById('ImageElement').src = imageUrl;
-            document.getElementById('TabIcon').href = imageUrl;
+            document.getElementById('ImageElement').src = `images/` + imageName + `.png`;
+
+            document.getElementById('EmbedOGTitle').content = imageName;
+            document.getElementById('EmbedOGImage').content = `images/` + imageName + `.png`;
+
+            document.getElementById('EmbedXTitle').content = imageName;
+            document.getElementById('EmbedXImage').content = `images/` + imageName + `.png`;
         }
     </script>
 </body>
